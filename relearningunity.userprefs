@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\scripts\button.cs">
+    <Files>
+      <File FileName="Assets\My Assets\scripts\inertiaa.js" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\scripts\ironsights.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\scripts\holstertwo.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\scripts\holsterone.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\scripts\primaryfire.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\scripts\grab.cs" Line="26" Column="69" />
+      <File FileName="Assets\My Assets\scripts\pausemenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="19" Column="60" />
+      <File FileName="Assets\My Assets\scripts\button.cs" Line="23" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
