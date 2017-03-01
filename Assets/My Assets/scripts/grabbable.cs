@@ -14,7 +14,7 @@ public class grabbable : MonoBehaviour {
 
 	
 
-		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false) {
+		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false && collider.CompareTag ("ignoreGrabTrigger") == false) {
 			count ++;
 			//Debug.Log (collider.name);
 		} //else {
@@ -31,7 +31,7 @@ public class grabbable : MonoBehaviour {
 
 	void OnTriggerExit(Collider collider){
 		
-		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false) {
+		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false && collider.CompareTag ("ignoreGrabTrigger") == false) {
 			count -= 1;
 			//Debug.Log (collider.name);
 		} //else {

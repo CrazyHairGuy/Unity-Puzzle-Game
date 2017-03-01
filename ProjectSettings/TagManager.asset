@@ -9,6 +9,7 @@ TagManager:
   - grab
   - trigger_button
   - player_trigger
+  - ignoreGrabTrigger
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - shadows
   - player
   - grabbed
-  - 
+  - minimap
   - 
   - 
   - 
