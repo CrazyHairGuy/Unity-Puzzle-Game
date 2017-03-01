@@ -106,12 +106,14 @@ public class grab : MonoBehaviour {
 
 	void HoldGrabbedObject(){
 
-		grabbedObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-		newPosition = (gameObject.transform.position + Camera.main.transform.forward * 2) + offset;
-		grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, lookRot, Time.deltaTime * rotSpeed);
-		//grabbedObject.GetComponent<BoxCollider> ().center = Vector3.zero;
-		xRay.SetActive (false);
-		grabbedObject.layer = 0;
+		if (grabbedObject != null) {
+			grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+			newPosition = (gameObject.transform.position + Camera.main.transform.forward * 2) + offset;
+			grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, lookRot, Time.deltaTime * rotSpeed);
+			//grabbedObject.GetComponent<BoxCollider> ().center = Vector3.zero;
+			xRay.SetActive (false);
+			grabbedObject.layer = 0;
+		}
 
 	}
 

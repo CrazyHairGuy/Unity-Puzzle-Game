@@ -1,0 +1,431 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: NewShaderVariants
+  m_Shaders:
+    data:
+      first: {fileID: 19, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _NORMALMAP _PARALLAXMAP
+          passType: 4
+        - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+        - keywords: DIRECTIONAL _NORMALMAP
+          passType: 5
+        - keywords: POINT _NORMALMAP _PARALLAXMAP
+          passType: 5
+        - keywords: POINT SHADOWS_CUBE _NORMALMAP _PARALLAXMAP
+          passType: 5
+        - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
+          passType: 5
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+        - keywords: SHADOWS_DEPTH _PARALLAXMAP
+          passType: 8
+        - keywords: SHADOWS_CUBE _PARALLAXMAP
+          passType: 8
+        - keywords: SHADOWS_DEPTH _SPECGLOSSMAP
+          passType: 8
+        - keywords: _EMISSION _NORMALMAP _PARALLAXMAP
+          passType: 10
+    data:
+      first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+        - keywords: POINT
+          passType: 5
+        - keywords: POINT SHADOWS_CUBE
+          passType: 5
+        - keywords: DIRECTIONAL _NORMALMAP
+          passType: 5
+        - keywords: POINT _NORMALMAP
+          passType: 5
+        - keywords: POINT SHADOWS_CUBE _NORMALMAP
+          passType: 5
+        - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
+          passType: 5
+        - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _NORMALMAP
+          passType: 5
+        - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+          passType: 5
+        - keywords: POINT _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+          passType: 5
+        - keywords: POINT SHADOWS_CUBE _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+          passType: 5
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+        - keywords: SHADOWS_CUBE
+          passType: 8
+        - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP
+          passType: 8
+        - keywords: SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP
+          passType: 8
+        - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP _PARALLAXMAP
+          passType: 8
+        - keywords: SHADOWS_CUBE _METALLICGLOSSMAP _PARALLAXMAP
+          passType: 8
+        - keywords: 
+          passType: 10
+        - keywords: _EMISSION
+          passType: 10
+        - keywords: _EMISSION _NORMALMAP
+          passType: 10
+        - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+          passType: 10
+    data:
+      first: {fileID: 74, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 69, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: POINT
+          passType: 0
+        - keywords: POINT SHADOWS_CUBE
+          passType: 0
+    data:
+      first: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 4, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 101, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: _SUNDISK_SIMPLE
+          passType: 0
+    data:
+      first: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 208, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 1
+    data:
+      first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10723, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 14000, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND INSTANCING_ON
+          passType: 4
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH
+            INSTANCING_ON
+          passType: 4
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_DETAIL
+            INSTANCING_ON
+          passType: 4
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF INSTANCING_ON
+          passType: 4
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND
+          passType: 5
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH
+          passType: 5
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_DETAIL
+          passType: 5
+        - keywords: DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF
+          passType: 5
+        - keywords: GEOM_TYPE_FROND SHADOWS_DEPTH
+          passType: 8
+        - keywords: GEOM_TYPE_BRANCH SHADOWS_DEPTH
+          passType: 8
+        - keywords: GEOM_TYPE_BRANCH_DETAIL SHADOWS_DEPTH
+          passType: 8
+        - keywords: GEOM_TYPE_LEAF SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 14001, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: BILLBOARD_FACE_CAMERA_POS DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION
+          passType: 4
+        - keywords: BILLBOARD_FACE_CAMERA_POS DIRECTIONAL EFFECT_BUMP EFFECT_HUE_VARIATION
+          passType: 5
+        - keywords: EFFECT_BUMP EFFECT_HUE_VARIATION SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 15104, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 15105, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 15106, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 01a668cc78047034a8a0c5ca2d24c6f7, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 4800000, guid: 0a4b0bce1e250a14bb534d70bce205fa, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 3954501323f24464f9e4418c78d8e8ce, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 963484209d11fd7f110076aa44295342, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: c0ace1ca4bc0718448acf798c93d52d9, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: d84268709d11078d11005b9844295342, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 1cac2e0bcc34e4b3cbb4bd85982eba83, type: 3}
+      second:
+        variants:
+        - keywords: WATER_REFRACTIVE
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 475c4a4e617a8401b84ca7b32c7cc460, type: 3}
+      second:
+        variants:
+        - keywords: WATER_EDGEBLEND_ON WATER_REFLECTIVE WATER_VERTEX_DISPLACEMENT_ON
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 8aaff0751054e4a9cb4642d01eaf5be9, type: 3}
+      second:
+        variants:
+        - keywords: WATER_EDGEBLEND_ON WATER_REFLECTIVE WATER_VERTEX_DISPLACEMENT_ON
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 9dccc8e8f0da4494991c26ef59019551, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 4090ad5b4f6c55640ab9495e6390c0ea, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 4800000, guid: a80a3f965a6b22d409492877f5651e1f, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 4800000, guid: 3766e6e9933194badba4b4a59b3796d8, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 58c6c8101e3b24af99a991fdb5d3dbfb, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
+    data:
+      first: {fileID: 4800000, guid: b36682a2a82e54bb28920dd1a712dc4d, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL
+          passType: 5
