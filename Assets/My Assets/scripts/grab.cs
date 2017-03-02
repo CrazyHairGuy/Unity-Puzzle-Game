@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class grab : MonoBehaviour {
 
-	GameObject grabbedObject;
+	public GameObject grabbedObject;
 //	float grabbedObjectSize;
 	//Quaternion lookRot;
 	public float speed = 5.0f;
@@ -70,7 +72,7 @@ public class grab : MonoBehaviour {
 		if (grabbedObject.GetComponent<Rigidbody> () != null && trigger.GetComponent<grabbable>().count == 0 && grabbedObject.transform.localScale == new Vector3(0.5f, 0.5f, 0.5f) /*&& Physics.Linecast (position, target, out raycastHit) == grabbedObject*/) {
 			grabbedObject.GetComponent<Rigidbody> ().isKinematic = false;
 			grabbedObject.GetComponent<BoxCollider> ().isTrigger = false;
-			grabbedObject.GetComponent<Rigidbody> ().velocity = this.GetComponent<Rigidbody> ().velocity;
+			grabbedObject.GetComponent<Rigidbody> ().velocity = this.GetComponent<CharacterController> ().velocity;
 			//	xRay.SetActive (false);
 			//	grabbedObject.layer = 0;
 			return true;
@@ -88,6 +90,14 @@ public class grab : MonoBehaviour {
 
 		if (PrepareDropObject () == true) {
 			grabbedObject.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * 150);
+			grabbedObject = null;
+		}
+	}
+
+	void HurlObject(){
+
+		if (PrepareDropObject () == true) {
+			grabbedObject.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * 1000);
 			grabbedObject = null;
 		}
 	}
@@ -134,7 +144,7 @@ public class grab : MonoBehaviour {
 		SetRotationAndPosition();
 		//Debug.Log (trigger.GetComponent<grabbable> ().count);
 
-		if (Input.GetKeyDown ("e")) {
+		if (CrossPlatformInputManager.GetButtonDown ("Use")) {
 			if (grabbedObject == null)
 				TryGrabbedObject (getMouseHoverObject (5));
 			else
@@ -142,8 +152,24 @@ public class grab : MonoBehaviour {
 		}
 		if (grabbedObject != null) {
 
-			if (Input.GetKeyDown (KeyCode.Mouse0)) {
-				ThrowObject ();
+			if (grabbedObject.GetComponent<grabvars> ()) {
+				
+				if (CrossPlatformInputManager.GetButtonDown ("Throw") && grabbedObject.GetComponent<grabvars> ().canThrow) {
+					ThrowObject ();
+				}
+
+				if (CrossPlatformInputManager.GetButtonDown ("Hurl") && grabbedObject.GetComponent<grabvars> ().canHurl) {
+					HurlObject ();
+				}
+			} else {
+
+				if (CrossPlatformInputManager.GetButtonDown ("Throw")) {
+					ThrowObject ();
+				}
+
+				if (CrossPlatformInputManager.GetButtonDown ("Hurl")) {
+					HurlObject ();
+				}
 			}
 
 			if (trigger.GetComponent<grabbable> ().count > 0) {
@@ -151,6 +177,7 @@ public class grab : MonoBehaviour {
 			} else {
 				HoldGrabbedObject ();
 			}
+			
 			//Quaternion lookRot = Quaternion.LookRotation (Camera.main.transform.position, Vector3.up);
 			//Quaternion newRotation = Quaternion.Lerp (grabbedObject.transform.rotation, lookRot, Time.deltaTime * rotSpeed);
 			//lookRot.Set(this.transform.rotation[0], Camera.main.transform.rotation[1], this.transform.rotation[2], Camera.main.transform.rotation[3]);

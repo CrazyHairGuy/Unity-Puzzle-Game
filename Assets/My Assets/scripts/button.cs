@@ -19,9 +19,9 @@ public class button : MonoBehaviour {
 	int count = 0;
 
 	void OnTriggerEnter(Collider collider){
-		if (collider.CompareTag ("trigger_button") || collider.CompareTag ("player_trigger") == false) {
+		if (collider.CompareTag ("button") == false && collider.CompareTag ("player_trigger") == false) {
 			count += 1;
-			Debug.Log ("touch " + count);
+			Debug.Log ("touch " + count + " " + collider.name);
 		}
 		//count += 1;
 
@@ -34,10 +34,10 @@ public class button : MonoBehaviour {
 	void OnTriggerExit(Collider collider){
 		//Debug.Log ("untouch");
 		//Debug.Log ("untouch " + count);
-		if (collider.CompareTag ("trigger_button") || collider.CompareTag ("player_trigger") == false) {
+		if (collider.CompareTag ("button") == false && collider.CompareTag ("player_trigger") == false) {
 			count -= 1;
 			//Debug.Log (collider.name);
-			Debug.Log ("untouch " + count);
+			Debug.Log ("untouch " + count + " " + collider.name);
 		}
 
 		//down = false;

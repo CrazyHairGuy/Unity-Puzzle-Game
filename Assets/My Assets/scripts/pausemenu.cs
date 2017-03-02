@@ -58,14 +58,12 @@ public class pausemenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-
 		
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			isShowing = !isShowing;
 			menu.SetActive (isShowing);
 			//pausecam.SetActive (isShowing);
-			player.GetComponent<CharacterController>().enabled = !isShowing;
+			//player.GetComponent<CharacterController>().enabled = !isShowing;
 			player.GetComponent<FirstPersonController>().enabled = !isShowing;
 			playerCam.GetComponent<BlurOptimized> ().enabled = isShowing;
 			xRay.GetComponent<BlurOptimized> ().enabled = isShowing;

@@ -7,7 +7,7 @@ public class grabbable : MonoBehaviour {
 	// Use this for initialization
 
 	public int count = 0;
-	//public GameObject player;
+	public GameObject player;
 	//public int player = 0;
 
 	void OnTriggerEnter(Collider collider){
@@ -17,15 +17,15 @@ public class grabbable : MonoBehaviour {
 		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false && collider.CompareTag ("ignoreGrabTrigger") == false) {
 			count ++;
 			//Debug.Log (collider.name);
-		} //else {
-		//	if (player.GetComponent<grab> ().grabbedObject != null) {
-		//		if (collider.name != player.GetComponent<grab> ().grabbedObject.name)
-			//		count ++;
-			//		}
-		//}
+		} /*else {
+			if (player.GetComponent<grab> ().grabbedObject != null) {
+				if (collider.name != player.GetComponent<grab> ().grabbedObject.name)
+					count ++;
+					}
+		}*/
 		
 		//if(collider.CompareTag("trigger_button") == false)
-		//	player += 1;
+			//player += 1;
 
 	}
 
@@ -34,12 +34,12 @@ public class grabbable : MonoBehaviour {
 		if (collider.CompareTag ("trigger_button") == false && collider.CompareTag ("Player") == false && collider.CompareTag ("grab") == false && collider.CompareTag ("ignoreGrabTrigger") == false) {
 			count -= 1;
 			//Debug.Log (collider.name);
-		} //else {
-			//if (player.GetComponent<grab> ().grabbedObject != null) {
-			//	if (collider.name != player.GetComponent<grab> ().grabbedObject.name)
-			//		count --;
-			//}
-		//}
+		} /*else {
+			if (player.GetComponent<grab> ().grabbedObject != null) {
+				if (collider.name != player.GetComponent<grab> ().grabbedObject.name)
+					count --;
+			}
+		}*/
 
 		//if(collider.CompareTag("trigger_button") == false)
 		//	player -= 1;

@@ -51,6 +51,7 @@
      <Compile Include="Assets\My Assets\scripts\button.cs" />
      <Compile Include="Assets\My Assets\scripts\grab.cs" />
      <Compile Include="Assets\My Assets\scripts\grabbable.cs" />
+     <Compile Include="Assets\My Assets\scripts\grabvars.cs" />
      <Compile Include="Assets\My Assets\scripts\holsterone.cs" />
      <Compile Include="Assets\My Assets\scripts\holstertwo.cs" />
      <Compile Include="Assets\My Assets\scripts\hud.cs" />

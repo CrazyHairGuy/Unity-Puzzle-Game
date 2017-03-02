@@ -10,6 +10,7 @@ TagManager:
   - trigger_button
   - player_trigger
   - ignoreGrabTrigger
+  - button
   layers:
   - Default
   - TransparentFX
