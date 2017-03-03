@@ -8,6 +8,7 @@ public class grabvars : MonoBehaviour {
 
 	public bool canThrow = true;
 	public bool canHurl = true;
+	public bool canResize = true;
 
 	void Start () {
 		

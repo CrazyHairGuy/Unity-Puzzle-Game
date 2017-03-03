@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityStandardAssets.ImageEffects;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class pausemenu : MonoBehaviour {
 	public GameObject menu; //Pause Menu Canvas
@@ -59,7 +60,7 @@ public class pausemenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (CrossPlatformInputManager.GetButtonDown("Pause")) {
 			isShowing = !isShowing;
 			menu.SetActive (isShowing);
 			//pausecam.SetActive (isShowing);

@@ -59,3 +59,8 @@ D:\Documents\Unity Projects\git\relearningunity\relearningunity\Temp\bin\Debug\U
 D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assembly-CSharp.dll
 D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assembly-CSharp.pdb
+C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\SabreCSG.Core.dll
+C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Advertisements.dll
+C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Purchasing.dll
+C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Advertisements.xml
+C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Purchasing.xml
