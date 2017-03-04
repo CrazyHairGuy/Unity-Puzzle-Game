@@ -64,7 +64,6 @@ public class pausemenu : MonoBehaviour {
 			isShowing = !isShowing;
 			menu.SetActive (isShowing);
 			//pausecam.SetActive (isShowing);
-			//player.GetComponent<CharacterController>().enabled = !isShowing;
 			player.GetComponent<FirstPersonController>().enabled = !isShowing;
 			playerCam.GetComponent<BlurOptimized> ().enabled = isShowing;
 			xRay.GetComponent<BlurOptimized> ().enabled = isShowing;
