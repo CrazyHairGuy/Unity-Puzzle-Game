@@ -1,0 +1,8 @@
+newmtl red
+Kd 0.75 0 0
+illum 2
+
+newmtl Black
+Kd 0 0 0
+illum 2
+

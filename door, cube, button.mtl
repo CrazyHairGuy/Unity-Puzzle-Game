@@ -1,0 +1,23 @@
+newmtl door_l
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl red
+Kd 0.75 0 0
+illum 2
+
+newmtl Black
+Kd 0 0 0
+illum 2
+
+newmtl wall light metal
+Kd 0.2549019 0.2549019 0.2549019
+illum 2
+
+newmtl cube
+Kd 1 1 1
+map_Kd null
+illum 2
+

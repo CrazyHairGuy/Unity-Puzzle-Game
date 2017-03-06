@@ -1,0 +1,8 @@
+newmtl wall light metal
+Kd 0.2549019 0.2549019 0.2549019
+illum 2
+
+newmtl Material_002
+Kd 1 0.9482759 0.7794118
+illum 2
+
