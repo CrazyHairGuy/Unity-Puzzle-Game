@@ -6,6 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class grab : MonoBehaviour {
 
+	public static grab Instance;
+
 	public GameObject grabbedObject;
 	float grabbedObjectSize;
 	//Quaternion lookRot;
@@ -63,7 +65,7 @@ public class grab : MonoBehaviour {
 		
 		if (grabbedObject == null)
 			return false;
-		if (grabbedObject.GetComponent<Rigidbody> () != null && trigger.GetComponent<grabbable>().count == 0 && triggerTwo.GetComponent<grabbable>().count == 0 /*&& grabbedObject.transform.localScale == new Vector3(0.5f, 0.5f, 0.5f)*/) {
+		if (grabbedObject.GetComponent<Rigidbody> () != null && trigger.GetComponent<grabbable>().count == 0 && triggerTwo.GetComponent<grabbable>().count == 0 /*&& grabbedObject.transform.localScale == scaleHold*/) {
 			grabbedObject.GetComponent<Rigidbody> ().isKinematic = false;
 			grabbedObject.GetComponent<BoxCollider> ().isTrigger = false;
 			grabbedObject.GetComponent<Rigidbody> ().velocity = this.GetComponent<CharacterController> ().velocity;
@@ -186,7 +188,13 @@ public class grab : MonoBehaviour {
 		scaleHold = new Vector3 (0.5f, 0.5f, 0.5f);
 		grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 	}
-	
+
+	void Start(){
+
+		Instance = this;
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -200,6 +208,14 @@ public class grab : MonoBehaviour {
 				DropObject ();
 		}
 		if (grabbedObject != null) {
+
+			if (grabbedObject.GetComponent<Rigidbody> ()) {
+
+				grabbedObject.GetComponent<Rigidbody> ().mass = ((grabbedObject.transform.localScale.x * 2) + (grabbedObject.transform.localScale.y * 2) + (grabbedObject.transform.localScale.z * 2)) / 3;
+
+				//Debug.Log (grabbedObject.GetComponent<Rigidbody> ().mass);
+
+			}
 
 			if (grabbedObject.GetComponent<grabvars> ()) {
 				

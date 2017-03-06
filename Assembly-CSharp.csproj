@@ -50,6 +50,7 @@
      <Compile Include="Assets\My Assets\scripts\CameraDisable.cs" />
      <Compile Include="Assets\My Assets\scripts\DeathTrigger.cs" />
      <Compile Include="Assets\My Assets\scripts\button.cs" />
+     <Compile Include="Assets\My Assets\scripts\crouchTrigger.cs" />
      <Compile Include="Assets\My Assets\scripts\death.cs" />
      <Compile Include="Assets\My Assets\scripts\deathGUI.cs" />
      <Compile Include="Assets\My Assets\scripts\grab.cs" />
@@ -62,8 +63,10 @@
      <Compile Include="Assets\My Assets\scripts\minimapcam.cs" />
      <Compile Include="Assets\My Assets\scripts\multiplediplays.cs" />
      <Compile Include="Assets\My Assets\scripts\pausemenu.cs" />
+     <Compile Include="Assets\My Assets\scripts\playerActions.cs" />
      <Compile Include="Assets\My Assets\scripts\primaryfire.cs" />
      <Compile Include="Assets\My Assets\scripts\underWater.cs" />
+     <Compile Include="Assets\OBJExport\OBJExporter.cs" />
      <Compile Include="Assets\SabreCSG\Scripts\Brushes\PrimitiveBrush.cs" />
      <Compile Include="Assets\SabreCSG\Scripts\CSGModel.cs" />
      <Compile Include="Assets\SabreCSG\Scripts\CSGModelBase.cs" />

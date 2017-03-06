@@ -1,0 +1,96 @@
+newmtl wall light metal
+Kd 0.2549019 0.2549019 0.2549019
+illum 2
+
+newmtl Material_002
+Kd 1 0.9482759 0.7794118
+illum 2
+
+newmtl Default-Material
+Kd 1 1 1
+illum 2
+
+newmtl metal_wall1
+Kd 0.5661764 0.4885425 0.3496972
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl black_rough
+Kd 0 0 0
+illum 2
+
+newmtl Default_Map
+Kd 1 1 1
+map_Kd null
+illum 2
+
+newmtl Material_003
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl metal_wall
+Kd 0.6176471 0.4276018 0
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl door_l
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl dark wall
+Kd 0.2941176 0.2941176 0.2941176
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl cube
+Kd 1 1 1
+map_Kd null
+illum 2
+
+newmtl door_r
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl wall
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl floor
+Kd 1 1 1
+Ks 0.2 0.2 0.2
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl WaterProDaytime
+map_Bump null
+illum 2
+
+newmtl dark tile
+Kd 0.2941176 0.2941176 0.2941176
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl tile
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+
+newmtl small_block
+Kd 1 1 1
+map_Kd null
+map_Bump null
+illum 2
+

@@ -19,6 +19,7 @@ public class death : MonoBehaviour {
 		dead = true;
 		GameObject head = Instantiate(deathCam, Camera.main.transform.position, Camera.main.transform.rotation) as GameObject;
 		head.GetComponent<Rigidbody> ().velocity = player.GetComponent<CharacterController> ().velocity;
+		player.GetComponent<grab>().grabbedObject = null;
 		player.SetActive(false);
 		gameObject.GetComponent<pausemenu> ().enabled = false;
 		Cursor.lockState = CursorLockMode.None;
@@ -40,7 +41,7 @@ public class death : MonoBehaviour {
 
 		if (dead)
 			timer++;
-		Debug.Log (timer);
+		//Debug.Log (timer);
 
 		if (timer > 30) {
 			deathText.SetActive (true);

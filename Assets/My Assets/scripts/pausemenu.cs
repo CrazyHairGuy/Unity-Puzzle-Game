@@ -12,13 +12,21 @@ public class pausemenu : MonoBehaviour {
 	public GameObject playerCam; //Main Camera
 	public GameObject xRay; //Viewmodel Camera
 	public GameObject player; //FPS Controller
+	public GameObject playerTrigger; //Trigger for picking up blocks
 	public GameObject hud; //Main Hud Canvas
-	private bool isShowing = false;
+	public bool isShowing = false;
 	public Button restartButton;
 	public Button quitButton;
 	public Button monitorButton;
-	bool toggle = false;
 	public GameObject minimapCamera;
+	public GameObject minimapCameraTwo;
+	public GameObject minimapCameraThree;
+	public GameObject spriteCamera;
+	public GameObject spriteCameraTwo;
+	public GameObject spriteCameraThree;
+	public GameObject RoomOneTrigger;
+	public GameObject RoomTwoTrigger;
+	public GameObject RoomThreeTrigger;
 	//float blurSize; //Default blur size for pause menu
 	//public float speed = 5.0f; //Speed for blur in pause menu
 
@@ -44,17 +52,29 @@ public class pausemenu : MonoBehaviour {
 
 	void ToggleMonitor(){
 
-		toggle = !toggle;
-
-		if (toggle) {
-			if (Display.displays.Length > 1) {
-				Display.displays [1].Activate ();
-				minimapCamera.SetActive (true);
-			}
-	//	} else {
-	//		Display.displays [1].Activate ();
-	//		minimapCamera.SetActive (false);
+		if (Display.displays.Length > 1) {
+			Display.displays [1].Activate ();
+			spriteCamera.SetActive (true);
+			minimapCamera.SetActive (true);
 		}
+
+		/*if (Display.displays.Length > 2) {
+			Display.displays [2].Activate ();
+			minimapCameraTwo.SetActive (true);
+			RoomOneTrigger.SetActive (false);
+		}*/
+
+		/*if (Display.displays.Length > 3) {
+			Display.displays [3].Activate ();
+			Display.displays [2].Activate ();
+			spriteCamera.GetComponent<Camera> ().targetDisplay = 4;
+			minimapCamera.GetComponent<Camera> ().targetDisplay = 4;
+			minimapCameraTwo.SetActive (true);
+			minimapCameraThree.SetActive (true);
+			RoomOneTrigger.SetActive (false);
+			RoomTwoTrigger.SetActive (false);
+			RoomThreeTrigger.SetActive (false);
+		}*/
 	}
 
 	// Update is called once per frame

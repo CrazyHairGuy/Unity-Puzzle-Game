@@ -11,6 +11,8 @@ TagManager:
   - player_trigger
   - ignoreGrabTrigger
   - button
+  - excludeFromCrouchTrigger
+  - Player_child
   layers:
   - Default
   - TransparentFX
