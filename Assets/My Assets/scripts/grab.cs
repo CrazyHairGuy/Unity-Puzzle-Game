@@ -23,7 +23,7 @@ public class grab : MonoBehaviour {
 	public float scale = 0.1f;
 	public GameObject trigger;
 	public GameObject triggerTwo;
-	int resize = 0;
+	public int resize = 0;
 	int activate = 0;
 	Vector3 scaleHold;
 	public float maxScale = 2f;

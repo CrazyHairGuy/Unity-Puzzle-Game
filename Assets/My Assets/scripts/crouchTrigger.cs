@@ -10,7 +10,7 @@ public class crouchTrigger : MonoBehaviour {
 
 		if(collider.CompareTag("excludeFromCrouchTrigger") == false && collider.CompareTag("player_trigger") == false && collider.CompareTag ("ignoreGrabTrigger") == false && collider.CompareTag ("Player") == false)
 			count ++;
-		Debug.Log (collider.gameObject.name);
+		//Debug.Log (collider.gameObject.name);
 		
 	}
 

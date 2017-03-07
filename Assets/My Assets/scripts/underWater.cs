@@ -24,7 +24,7 @@ public class underWater : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		RenderSettings.fogColor = new Color(0.5f, 0.25f, 0);
+		RenderSettings.fogColor = new Color(0, 0.25f, 0.35f);
 	}
 	
 	// Update is called once per frame

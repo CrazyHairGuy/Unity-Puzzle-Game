@@ -21,7 +21,7 @@ public class button : MonoBehaviour {
 	void OnTriggerEnter(Collider collider){
 		if (collider.CompareTag ("button") == false && collider.CompareTag ("player_trigger") == false) {
 			count += 1;
-			Debug.Log ("touch " + count + " " + collider.name);
+			//Debug.Log ("touch " + count + " " + collider.name);
 		}
 		//count += 1;
 
