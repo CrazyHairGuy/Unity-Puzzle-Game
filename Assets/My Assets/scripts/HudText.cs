@@ -9,6 +9,9 @@ public class HudText : MonoBehaviour {
 	public Text axis;
 	public Text size;
 	public GameObject grabbedObjectHud;
+	public Text throe;
+	public Text resize;
+	public Text hurl;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +21,20 @@ public class HudText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (player.GetComponent<grab> ().grabbedObject != null) {
+
+			if (player.GetComponent<grab> ().grabbedObject.GetComponent<grabvars> ().canResize == false)
+				resize.color = Color.red;
+			else
+				resize.color = Color.green;
+			if (player.GetComponent<grab> ().grabbedObject.GetComponent<grabvars> ().canThrow == false)
+				throe.color = Color.red;
+			else
+				throe.color = Color.green;
+			if (player.GetComponent<grab> ().grabbedObject.GetComponent<grabvars> ().canHurl == false)
+				hurl.color = Color.red;
+			else
+				hurl.color = Color.green;
+
 			grabbedObjectHud.SetActive (true);
 			if (player.GetComponent<grab> ().grabbedObject.GetComponent<grabvars> ().canResize == false) {
 				axis.text = "No";
@@ -40,6 +57,18 @@ public class HudText : MonoBehaviour {
 			}
 		} else {
 			grabbedObjectHud.SetActive (false);
+			resize.color = Color.white;
+			throe.color = Color.white;
+			hurl.color = Color.white;
 		}
+	//	if (player.GetComponent<grab> ().getMouseHoverObject (5) != null) {
+	//		resize.color = Color.yellow;
+	//		throe.color = Color.yellow;
+	//		hurl.color = Color.yellow;
+	//	} else {
+	//		resize.color = Color.white;
+	//		throe.color = Color.white;
+	//		hurl.color = Color.white;
+	//	}
 	}
 }

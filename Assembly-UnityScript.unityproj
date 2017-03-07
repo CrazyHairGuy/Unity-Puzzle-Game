@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9581D851-046E-5A4D-5FEC-3DBEBEB1919D}</ProjectGuid>
+    <ProjectGuid>{57E998BC-318E-AF3E-D818-EEA56CC12A96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-UnityScript</AssemblyName>
@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\My Assets\scripts\inertiaa.js" />
      <Compile Include="Assets\My Assets\scripts\inertiaw.js" />
+     <Compile Include="Assets\Water FX Pack\Scripts\ScrollUV.js" />
      <None Include="Assets\SabreCSG\Shaders\VertexTinted.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
@@ -178,12 +179,12 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="SabreCSG.Core">
- <HintPath>D:/Documents/Unity Projects/Unity-Puzzle-Game/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
+ <HintPath>C:/Users/trevo/Documents/Unity Projects/restartrelearn/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5EDFA8EC-6B31-60F9-9C63-2A678D1A4DD5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CA32A7C0-E1F9-0B58-EEB6-B0DBF7155381}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

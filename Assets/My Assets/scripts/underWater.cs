@@ -10,9 +10,23 @@ public class underWater : MonoBehaviour {
 		//if (collider.GetComponent<GlobalFog>())
 		//	collider.gameObject.AddComponent<
 
-		if (collider.GetComponent<Rigidbody> ())
+		if (collider.GetComponent<Rigidbody> ()) {
 			collider.GetComponent<Rigidbody> ().drag = 4;
+		}
+	}
 
+	void OnTriggerStay(Collider collider){
+
+		int bigger = 1;
+
+		if (collider.GetComponent<Rigidbody> ()) {
+			//if (collider.GetComponent<Rigidbody> ().mass <= 1f) {
+				collider.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, 5, 0) * bigger);
+			//}
+			//Debug.Log(bigger);
+			bigger++;
+
+		}
 	}
 
 	void OnTriggerExit(Collider collider){

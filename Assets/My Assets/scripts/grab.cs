@@ -15,7 +15,7 @@ public class grab : MonoBehaviour {
 	public float rotSpeed = 5.0f;
 	public Vector3 offset = new Vector3(0, 1, 0);
 	Quaternion lookRot;
-	public GameObject xRay;
+	//public GameObject xRay;
 	Vector3 newPosition;
 	public float offsetDistance = 1;
 	Vector3 size = new Vector3 (2, 2, 3);
@@ -29,8 +29,12 @@ public class grab : MonoBehaviour {
 	public float maxScale = 2f;
 	public float minScale = 0.2f;
 	public float distance = 2f;
+	int timee = 0;
+	int disappear = 0;
+	public Material alpha;
+	Material defaultMaterial;
 
-	GameObject getMouseHoverObject(float range){
+	public GameObject getMouseHoverObject(float range){
 		
 		Vector3 position = gameObject.transform.position;
 		RaycastHit raycastHit;
@@ -50,6 +54,7 @@ public class grab : MonoBehaviour {
 		grabbedObjectSize = grabObject.GetComponent<MeshRenderer> ().bounds.size.magnitude;
 		grabbedObject.GetComponent<Rigidbody> ().isKinematic = true;
 		grabbedObject.GetComponent<BoxCollider> ().isTrigger = true;
+		defaultMaterial = grabbedObject.GetComponent<MeshRenderer> ().material;
 		
 	}
 
@@ -74,7 +79,7 @@ public class grab : MonoBehaviour {
 		return false;
 	}
 
-	void DropObject(){
+	public void DropObject(){
 
 		if(PrepareDropObject () == true)
 			grabbedObject = null;
@@ -90,15 +95,28 @@ public class grab : MonoBehaviour {
 
 	void CompressGrabbedObject(){
 		
-		if (activate == 0)
+		/*if (activate == 0)
 			scaleHold = grabbedObject.transform.localScale;
 			grabbedObject.transform.localScale = Vector3.Lerp(grabbedObject.transform.localScale, new Vector3(0.1f, 0.1f, 0.1f), Time.deltaTime * speed);
 		
 		newPosition = (hand.transform.position);
 		grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, hand.transform.rotation, Time.deltaTime * rotSpeed * 2);
 		grabbedObject.layer = 11;
-		xRay.SetActive (true);
-		activate = 1;
+		xRay.SetActive (true);*/
+		newPosition = (hand.transform.position);
+		grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, hand.transform.rotation, Time.deltaTime * rotSpeed * 2);
+		if (activate == 1) {
+			disappear = 1;
+		} else {
+			disappear = 0;
+		}
+
+		if (timee == 10) {
+			grabbedObject.GetComponent<MeshRenderer> ().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+			grabbedObject.GetComponent<MeshRenderer> ().material = alpha;
+			//grabbedObject.GetComponent<MeshRenderer> ().enabled = false;
+		}
+		//grabbedObject.GetComponent<MeshRenderer> ().enabled = true;
 	
 	}
 
@@ -106,8 +124,11 @@ public class grab : MonoBehaviour {
 
 		if (grabbedObject != null) {
 
-			if (activate == 1)
-				grabbedObject.transform.localScale = scaleHold;
+			grabbedObject.GetComponent<MeshRenderer> ().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+			grabbedObject.GetComponent<MeshRenderer> ().material = defaultMaterial;
+			activate = 1;
+
+				//grabbedObject.transform.localScale = scaleHold;
 			
 			//if (distanceEnable == 3){
 			//	float MouseWheel = CrossPlatformInputManager.GetAxis ("Mouse ScrollWheel");
@@ -116,9 +137,9 @@ public class grab : MonoBehaviour {
 
 			newPosition = (gameObject.transform.position + Camera.main.transform.forward * 2 /** distance*/  + Camera.main.transform.forward * grabbedObject.transform.localScale.z) + offset;
 			grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, lookRot, Time.deltaTime * rotSpeed);
-			xRay.SetActive (false);
-			grabbedObject.layer = 13;
-			activate = 0;
+			//xRay.SetActive (false);
+			//grabbedObject.layer = 13;
+			//activate = 0;
 		}
 
 	}
@@ -197,6 +218,14 @@ public class grab : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (disappear == 1) {
+			timee++;
+			if (timee > 10) {
+				disappear = 0;
+				timee = 0;
+			}
+		}
 		
 		SetRotationAndPosition();
 		//Debug.Log (trigger.GetComponent<grabbable> ().count);
@@ -279,7 +308,8 @@ public class grab : MonoBehaviour {
 				HoldGrabbedObject (/*resize*/);
 				if (grabbedObject != null) {
 					trigger.transform.localScale = grabbedObject.transform.localScale;// + new Vector3(0.5f,0.5f,0.5f);
-					trigger.transform.position = grabbedObject.transform.position;
+					//trigger.transform.position = grabbedObject.transform.position;
+					trigger.transform.position = (gameObject.transform.position + Camera.main.transform.forward * 2 + Camera.main.transform.forward * grabbedObject.transform.localScale.z) + offset;
 				}
 			}
 		}
