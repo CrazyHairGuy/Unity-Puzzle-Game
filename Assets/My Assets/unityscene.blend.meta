@@ -47,6 +47,7 @@ ModelImporter:
     100078: Cylinder_001
     100080: door
     100082: door_001
+    100084: cube__1_
     400000: //RootNode
     400002: ceiling_light_1
     400004: ceiling_light_1__1_
@@ -89,6 +90,7 @@ ModelImporter:
     400078: Cylinder_001
     400080: door
     400082: door_001
+    400084: cube__1_
     2300000: //RootNode
     2300002: ceiling_light_1
     2300004: ceiling_light_1__1_
@@ -131,6 +133,7 @@ ModelImporter:
     2300078: Cylinder_001
     2300080: door
     2300082: door_001
+    2300084: cube__1_
     3300000: //RootNode
     3300002: ceiling_light_1
     3300004: ceiling_light_1__1_
@@ -173,6 +176,7 @@ ModelImporter:
     3300078: Cylinder_001
     3300080: door
     3300082: door_001
+    3300084: cube__1_
     4300000: MaterialMesh
     4300002: ceiling_light_1__4_
     4300004: ceiling_light_1__3_
@@ -214,6 +218,7 @@ ModelImporter:
     4300076: Cube_001
     4300078: door_001
     4300080: door
+    4300082: cube__1_
     7400000: Default Take
     9500000: //RootNode
   materials:
