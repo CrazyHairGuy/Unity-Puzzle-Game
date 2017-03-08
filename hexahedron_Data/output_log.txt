@@ -2,33 +2,46 @@ Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 940M (ID=0x1347)
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
     Vendor:   NVIDIA
-    VRAM:     4065 MB
-    Driver:   21.20.16.4542
+    VRAM:     8120 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.030 seconds
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\trevo\Documents\Unity Projects\restartrelearn\hexahedron_Data\Managed\System.dll (this message is harmless)
-desktop: 1440x900 60Hz; virtual: 3360x1080 at 0,0
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.146 seconds
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Documents\Unity Projects\Unity-Puzzle-Game\hexahedron_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3527x2104 at 0,-1024
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.867555 ms
-desktop: 1920x1080 60Hz; virtual: 3360x1080 at 0,0
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 87c -> priority: 1 
+UnloadTime: 0.824787 ms
+untouch 0 cube (1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+untouch 0 cube (1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.789556 ms
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 1672.
+Total: 0.460619 ms (FindLiveObjects: 0.104563 ms CreateObjectMapping: 0.033652 ms MarkObjects: 0.256901 ms  DeleteObjects: 0.065201 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3820 -> priority: 1 
+  Thread -> id: 3ac8 -> priority: 1 
