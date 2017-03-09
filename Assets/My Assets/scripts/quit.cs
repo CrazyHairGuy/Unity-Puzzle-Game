@@ -13,6 +13,7 @@ public class quit : MonoBehaviour {
 	Vector3 defaultPos;
 	public Vector3 offset = new Vector3(0.5f, 0, -0.25f);
 	public float speed = 5;
+	public GameObject quitText;
 	//public GameObject loading;
 	//int timer;
 	//public GameObject loadingPos;
@@ -30,8 +31,8 @@ public class quit : MonoBehaviour {
 	}
 
 	void Start () {
-		defaultColor = gameObject.GetComponent<MeshRenderer> ().material.color;
-		defaultPos = gameObject.transform.localPosition;
+		defaultColor = quitText.GetComponent<MeshRenderer> ().material.color;
+		defaultPos = quitText.transform.localPosition;
 		//deltatime += (Time.deltaTime - deltatime) * 0.1f;
 		//fps = 1.0f / deltatime;
 	}
@@ -40,23 +41,23 @@ public class quit : MonoBehaviour {
 	void Update () {
 
 		if (isHovering == true) {
-			Camera.main.GetComponent<DepthOfField> ().focalTransform = this.gameObject.transform;
-			gameObject.GetComponent<MeshRenderer> ().material.color = Color.gray;
-			gameObject.transform.localPosition = Vector3.Lerp(gameObject.transform.localPosition, defaultPos + offset, Time.deltaTime * speed);
-			//gameObject.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp (gameObject.transform.localPosition, new Vector3(-offset, 0, 0), Time.deltaTime * speed);
+			Camera.main.GetComponent<DepthOfField> ().focalTransform = this.quitText.transform;
+			quitText.GetComponent<MeshRenderer> ().material.color = Color.gray;
+			quitText.transform.localPosition = Vector3.Lerp(quitText.transform.localPosition, defaultPos + offset, Time.deltaTime * speed);
+			//quitText.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp (quitText.transform.localPosition, new Vector3(-offset, 0, 0), Time.deltaTime * speed);
 			if (CrossPlatformInputManager.GetButtonUp ("Throw")) {
 				Application.Quit();
 				//loading.transform.localScale = Vector3.Lerp (loading.transform.localScale, new Vector3(0.2f, 0.2f, 5), Time.deltaTime * speed);
 				//SceneManager.LoadScene ("rev 2 experimental");
 			}
 		} else {
-			gameObject.transform.localPosition = Vector3.Lerp (gameObject.transform.localPosition, defaultPos, Time.deltaTime * speed);
-			//gameObject.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp(gameObject.transform.localPosition, defaultPos + new Vector3(0, 0, 0), Time.deltaTime * speed);
-			gameObject.GetComponent<MeshRenderer> ().material.color = defaultColor;
+			quitText.transform.localPosition = Vector3.Lerp (quitText.transform.localPosition, defaultPos, Time.deltaTime * speed);
+			//quitText.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp(quitText.transform.localPosition, defaultPos + new Vector3(0, 0, 0), Time.deltaTime * speed);
+			quitText.GetComponent<MeshRenderer> ().material.color = defaultColor;
 			//if (isPressed){
 			//	loading.transform.localScale = Vector3.Lerp (loading.transform.localScale, new Vector3(1f, 1f, 25), Time.deltaTime * speed);
 			//	loading.transform.position = Vector3.Lerp (loading.transform.position, loadingPos.transform.position, Time.deltaTime * speed);
-			//Camera.main.GetComponent<DepthOfField> ().focalTransform = loading.gameObject.transform;
+			//Camera.main.GetComponent<DepthOfField> ().focalTransform = loading.quitText.transform;
 			//timer++;
 			//if (timer > 30)
 			//	SceneManager.LoadScene ("rev 2 experimental");

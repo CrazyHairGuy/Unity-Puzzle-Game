@@ -238,6 +238,8 @@ public class grab : MonoBehaviour {
 		}
 		if (grabbedObject != null) {
 
+			trigger.transform.localScale = grabbedObject.transform.localScale;// + new Vector3(0.5f,0.5f,0.5f);
+
 			if (grabbedObject.GetComponent<Rigidbody> ()) {
 
 				grabbedObject.GetComponent<Rigidbody> ().mass = ((grabbedObject.transform.localScale.x * 2) + (grabbedObject.transform.localScale.y * 2) + (grabbedObject.transform.localScale.z * 2)) / 3;
@@ -307,7 +309,6 @@ public class grab : MonoBehaviour {
 			} else {
 				HoldGrabbedObject (/*resize*/);
 				if (grabbedObject != null) {
-					trigger.transform.localScale = grabbedObject.transform.localScale;// + new Vector3(0.5f,0.5f,0.5f);
 					//trigger.transform.position = grabbedObject.transform.position;
 					trigger.transform.position = (gameObject.transform.position + Camera.main.transform.forward * 2 + Camera.main.transform.forward * grabbedObject.transform.localScale.z) + offset;
 				}

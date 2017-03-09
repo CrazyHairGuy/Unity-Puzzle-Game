@@ -27,6 +27,8 @@ public class pausemenu : MonoBehaviour {
 	public GameObject RoomOneTrigger;
 	public GameObject RoomTwoTrigger;
 	public GameObject RoomThreeTrigger;
+	public bool onLoadMenu = false;
+	public bool onOptionsMenu = false;
 	//float blurSize; //Default blur size for pause menu
 	//public float speed = 5.0f; //Speed for blur in pause menu
 
@@ -79,12 +81,15 @@ public class pausemenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+	//Debug.Log (onLoadMenu);
 		
-		if (CrossPlatformInputManager.GetButtonDown("Pause")) {
+	if (CrossPlatformInputManager.GetButtonDown("Pause") && !onLoadMenu && !onOptionsMenu) {
 			isShowing = !isShowing;
 			menu.SetActive (isShowing);
 			//pausecam.SetActive (isShowing);
 			player.GetComponent<FirstPersonController>().enabled = !isShowing;
+			player.GetComponent<grab>().enabled = !isShowing;
 			playerCam.GetComponent<BlurOptimized> ().enabled = isShowing;
 			xRay.GetComponent<BlurOptimized> ().enabled = isShowing;
 			hud.SetActive (!isShowing);
@@ -93,14 +98,14 @@ public class pausemenu : MonoBehaviour {
 		if (isShowing) {
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
-			Time.timeScale = 0.0f;
+			//Time.timeScale = 0.0f;
 			//playerCam.GetComponent<BlurOptimized> ().blurSize = Mathf.Lerp (0.0f, 3.0f, Time.deltaTime * speed);
 			//xRay.GetComponent<BlurOptimized> ().blurSize = Mathf.Lerp (0.0f, 3.0f, Time.deltaTime * speed);
 		}
 		else {
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
-			Time.timeScale = 1.0f;
+			//Time.timeScale = 1.0f;
 			//playerCam.GetComponent<BlurOptimized> ().blurSize = Mathf.Lerp (3.0f, 0.0f, Time.deltaTime * speed);
 			//xRay.GetComponent<BlurOptimized> ().blurSize = Mathf.Lerp (3.0f, 0.0f, Time.deltaTime * speed);
 
