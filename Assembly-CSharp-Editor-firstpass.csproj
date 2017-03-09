@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D4424310-537B-C6A5-AC64-239CBC611C85}</ProjectGuid>
+    <ProjectGuid>{E3951FF0-0A4A-C4EF-BC93-0DD5E3ECEE8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -221,7 +221,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="SabreCSG.Core">
- <HintPath>D:/Documents/Unity Projects/Unity-Puzzle-Game/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
+ <HintPath>C:/Users/trevo/Documents/Unity Projects/restartrelearn/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -244,7 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5EDFA8EC-6B31-60F9-9C63-2A678D1A4DD5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CA32A7C0-E1F9-0B58-EEB6-B0DBF7155381}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
