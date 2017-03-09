@@ -10,6 +10,7 @@ public class death : MonoBehaviour {
 	public GameObject deathCam;
 	public GameObject deathText;
 	public GameObject restartButton;
+	public GameObject mainMenuButton;
 	public GameObject HUD;
 	int timer = 0;
 	bool dead;
@@ -46,6 +47,7 @@ public class death : MonoBehaviour {
 		if (timer > 30) {
 			deathText.SetActive (true);
 			restartButton.SetActive (true);
+			mainMenuButton.SetActive (true);
 		}
 	}
 }
