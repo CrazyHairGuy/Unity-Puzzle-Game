@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.ImageEffects;
 using UnityStandardAssets.CrossPlatformInput;
-
+using UnityEngine.SceneManagement;
 
 public class preferences : MonoBehaviour {
 
@@ -49,23 +49,24 @@ public class preferences : MonoBehaviour {
 	void Update () {
 
 		if (load.GetComponent<loadsceneone> ().menuIsActive == false) {
-		if (option.bloom)
-			Camera.main.GetComponent<Bloom> ().enabled = true;
-		else
-			Camera.main.GetComponent<Bloom> ().enabled = false;
-		if (option.abberation)
-			Camera.main.GetComponent<VignetteAndChromaticAberration> ().enabled = true;
-		else
-			Camera.main.GetComponent<VignetteAndChromaticAberration> ().enabled = false;
-		if (option.DoF)
-			Camera.main.GetComponent<DepthOfField> ().enabled = true;
-		else
-			Camera.main.GetComponent<DepthOfField> ().enabled = false;
-		if (option.noise)
-			Camera.main.GetComponent<NoiseAndGrain> ().enabled = true;
-		else
-			Camera.main.GetComponent<NoiseAndGrain> ().enabled = false;
-		
+			if (SceneManager.GetActiveScene().name.Equals("menu") == false) {
+				if (option.bloom)
+					Camera.main.GetComponent<Bloom> ().enabled = true;
+				else
+					Camera.main.GetComponent<Bloom> ().enabled = false;
+				if (option.abberation)
+					Camera.main.GetComponent<VignetteAndChromaticAberration> ().enabled = true;
+				else
+					Camera.main.GetComponent<VignetteAndChromaticAberration> ().enabled = false;
+				if (option.DoF)
+					Camera.main.GetComponent<DepthOfField> ().enabled = true;
+				else
+					Camera.main.GetComponent<DepthOfField> ().enabled = false;
+				if (option.noise)
+					Camera.main.GetComponent<NoiseAndGrain> ().enabled = true;
+				else
+					Camera.main.GetComponent<NoiseAndGrain> ().enabled = false;
+			}
 
 
 		/*if (isHovering) {
@@ -83,7 +84,7 @@ public class preferences : MonoBehaviour {
 				pauseCam.GetComponent<DepthOfField> ().focalTransform = title.transform;
 				optionMenu.transform.localPosition = Vector3.Lerp (optionMenu.transform.localPosition, new Vector3 (-2.3f, 0.60f, 0), Time.deltaTime * speed);
 				//optionMenu.transform.localScale = new Vector3 (4.5f, 0.9f, 0.2f);
-				optionMenu.transform.localScale = Vector3.Lerp (optionMenu.transform.localScale, new Vector3 (5, 0, 0), Time.deltaTime * speed * 3);
+				optionMenu.transform.localScale = Vector3.Lerp (optionMenu.transform.localScale, new Vector3 (3.3f, 0, 0), Time.deltaTime * speed * 3);
 				title.transform.position = Vector3.Lerp (title.transform.position, defaultTitlePos, Time.deltaTime * speed);
 				title.transform.rotation = Quaternion.Lerp (title.transform.rotation, defaultTitleRot, Time.deltaTime * speed);
 				//title.transform.position = defaultTitlePos;

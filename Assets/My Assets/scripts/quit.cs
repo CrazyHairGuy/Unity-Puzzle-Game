@@ -14,6 +14,7 @@ public class quit : MonoBehaviour {
 	public Vector3 offset = new Vector3(0.5f, 0, -0.25f);
 	public float speed = 5;
 	public GameObject quitText;
+	public Camera pauseCam;
 	//public GameObject loading;
 	//int timer;
 	//public GameObject loadingPos;
@@ -41,7 +42,7 @@ public class quit : MonoBehaviour {
 	void Update () {
 
 		if (isHovering == true) {
-			Camera.main.GetComponent<DepthOfField> ().focalTransform = this.quitText.transform;
+			pauseCam.GetComponent<DepthOfField> ().focalTransform = this.quitText.transform;
 			quitText.GetComponent<MeshRenderer> ().material.color = Color.gray;
 			quitText.transform.localPosition = Vector3.Lerp(quitText.transform.localPosition, defaultPos + offset, Time.deltaTime * speed);
 			//quitText.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp (quitText.transform.localPosition, new Vector3(-offset, 0, 0), Time.deltaTime * speed);
@@ -57,7 +58,7 @@ public class quit : MonoBehaviour {
 			//if (isPressed){
 			//	loading.transform.localScale = Vector3.Lerp (loading.transform.localScale, new Vector3(1f, 1f, 25), Time.deltaTime * speed);
 			//	loading.transform.position = Vector3.Lerp (loading.transform.position, loadingPos.transform.position, Time.deltaTime * speed);
-			//Camera.main.GetComponent<DepthOfField> ().focalTransform = loading.quitText.transform;
+			//pauseCam.GetComponent<DepthOfField> ().focalTransform = loading.quitText.transform;
 			//timer++;
 			//if (timer > 30)
 			//	SceneManager.LoadScene ("rev 2 experimental");
