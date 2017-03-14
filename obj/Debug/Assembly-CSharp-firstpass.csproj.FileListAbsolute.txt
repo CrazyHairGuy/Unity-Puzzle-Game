@@ -92,3 +92,7 @@ D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\UnityEngine.VR.xml
 D:\Documents\Unity Projects\Unity-Puzzle-Game\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 D:\Documents\Unity Projects\Unity-Puzzle-Game\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\Documents\Unity Projects\Unity-Puzzle-Game\obj\Debug\Assembly-CSharp-firstpass.pdb
+D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\UnityEngine.Advertisements.dll
+D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\UnityEngine.Purchasing.dll
+D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\UnityEngine.Advertisements.xml
+D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\UnityEngine.Purchasing.xml

@@ -27,6 +27,7 @@ public class preferences : MonoBehaviour {
 	public GameObject scriptball;
 	public GameObject optionText;
 	public GameObject load;
+	//public Transform DOFFocus;
 
 	void OnMouseEnter(){
 		isHovering = true;
@@ -50,6 +51,16 @@ public class preferences : MonoBehaviour {
 
 		if (load.GetComponent<loadsceneone> ().menuIsActive == false) {
 			if (SceneManager.GetActiveScene().name.Equals("menu") == false) {
+
+					if (Camera.main.GetComponent<DepthOfField> ().enabled) {
+						RaycastHit DOFHit;
+						Ray DOFRay = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
+						if (Physics.Raycast (DOFRay, out DOFHit)) {
+							//DOFFocus.position = DOFHit.point;
+							Camera.main.GetComponent<DepthOfField> ().focalTransform.position = DOFHit.point;
+						}
+					}
+					
 				if (option.bloom)
 					Camera.main.GetComponent<Bloom> ().enabled = true;
 				else
@@ -66,6 +77,7 @@ public class preferences : MonoBehaviour {
 					Camera.main.GetComponent<NoiseAndGrain> ().enabled = true;
 				else
 					Camera.main.GetComponent<NoiseAndGrain> ().enabled = false;
+					
 			}
 
 

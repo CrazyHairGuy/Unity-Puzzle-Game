@@ -17,6 +17,8 @@ public class activateminimap : MonoBehaviour {
 	public GameObject minimapCamera;
 	public GameObject spriteCamera;
 	public GameObject quitButton;
+	public GameObject pauseCam;
+	public options option;
 	//public GameObject loading;
 	//int timer;
 	//public GameObject loadingPos;
@@ -43,19 +45,26 @@ public class activateminimap : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (option.monitor) {
+				quitButton.transform.position = gameObject.transform.position;
+				gameObject.SetActive (false);
+			}
+			
+
 		if (isHovering == true) {
-			Camera.main.GetComponent<DepthOfField> ().focalTransform = this.quitText.transform;
+			pauseCam.GetComponent<DepthOfField> ().focalTransform = this.quitText.transform;
 			quitText.GetComponent<MeshRenderer> ().material.color = Color.gray;
 			quitText.transform.localPosition = Vector3.Lerp(quitText.transform.localPosition, defaultPos + offset, Time.deltaTime * speed);
 			//quitText.GetComponent<BoxCollider>().transform.localPosition = Vector3.Lerp (quitText.transform.localPosition, new Vector3(-offset, 0, 0), Time.deltaTime * speed);
 			if (CrossPlatformInputManager.GetButtonUp ("Throw")) {
-				if (Display.displays.Length > 1) {
-					Display.displays [1].Activate ();
-					spriteCamera.SetActive (true);
-					minimapCamera.SetActive (true);
+				if (option.monitor == false) {
+					if (Display.displays.Length > 1) {
+						Display.displays [1].Activate ();
+						spriteCamera.SetActive (true);
+						minimapCamera.SetActive (true);
 
-					quitButton.transform.position = gameObject.transform.position;
-					gameObject.SetActive (false);
+						option.monitor = true;
+					}
 				}
 				//loading.transform.localScale = Vector3.Lerp (loading.transform.localScale, new Vector3(0.2f, 0.2f, 5), Time.deltaTime * speed);
 				//SceneManager.LoadScene ("rev 2 experimental");

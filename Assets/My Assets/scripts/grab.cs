@@ -33,6 +33,7 @@ public class grab : MonoBehaviour {
 	int disappear = 0;
 	public Material alpha;
 	Material defaultMaterial;
+	public GameObject placementPreview;
 
 	public GameObject getMouseHoverObject(float range){
 		
@@ -104,6 +105,7 @@ public class grab : MonoBehaviour {
 		grabbedObject.layer = 11;
 		xRay.SetActive (true);*/
 		newPosition = (hand.transform.position);
+		placementPreview.SetActive (true);
 		grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, hand.transform.rotation, Time.deltaTime * rotSpeed * 2);
 		if (activate == 1) {
 			disappear = 1;
@@ -114,6 +116,7 @@ public class grab : MonoBehaviour {
 		if (timee == 10) {
 			grabbedObject.GetComponent<MeshRenderer> ().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 			grabbedObject.GetComponent<MeshRenderer> ().material = alpha;
+			grabbedObject.layer = 2;
 			//grabbedObject.GetComponent<MeshRenderer> ().enabled = false;
 		}
 		//grabbedObject.GetComponent<MeshRenderer> ().enabled = true;
@@ -126,6 +129,8 @@ public class grab : MonoBehaviour {
 
 			grabbedObject.GetComponent<MeshRenderer> ().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 			grabbedObject.GetComponent<MeshRenderer> ().material = defaultMaterial;
+			grabbedObject.layer = 13;
+			placementPreview.SetActive (false);
 			activate = 1;
 
 				//grabbedObject.transform.localScale = scaleHold;

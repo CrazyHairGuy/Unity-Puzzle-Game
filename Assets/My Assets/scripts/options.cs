@@ -13,6 +13,7 @@ public class options : ScriptableObject {
 	public bool abberation = false;
 	public bool DoF = false;
 	public bool noise = false;
+	public bool monitor = false;
 
 	// Use this for initialization
 	void Start () {
