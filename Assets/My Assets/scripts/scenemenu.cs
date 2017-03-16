@@ -11,7 +11,7 @@ public class scenemenu : MonoBehaviour {
 	public bool isPressed;
 	//Color defaultColor;
 	Vector3 defaultPos;
-	public Vector3 offset = new Vector3(0.5f, 0, -0.25f);
+	public Vector3 offset = new Vector3(0.01f, 0, 2.5f);
 	public float speed = 5;
 	public GameObject loading;
 	//int timer;

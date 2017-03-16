@@ -8,11 +8,13 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class playerActions : MonoBehaviour {
 
-	public GameObject scriptball;
+	GameObject scriptball;
 	public GameObject crouchTriggerObject;
 	float walkSpeed;
 	// Use this for initialization
 	void Start () {
+
+		scriptball = GameObject.FindGameObjectWithTag ("ScriptBall");
 
 		walkSpeed = gameObject.GetComponent<FirstPersonController> ().m_WalkSpeed;
 		//crouchSpeed = walkSpeed * (3 / 5);
@@ -24,7 +26,7 @@ public class playerActions : MonoBehaviour {
 
 		//Debug.Log (walkSpeed);
 
-		if(scriptball.GetComponent<pausemenu>().isShowing == false) {
+		if(scriptball.GetComponent<loadlevelprefabs>().pauseMenu.GetComponentInChildren<pausemenu>().isShowing == false) {
 			
 			if (CrossPlatformInputManager.GetButton ("Crouch")) {
 				gameObject.GetComponent<CharacterController> ().height = 0.4f;

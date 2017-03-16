@@ -24,9 +24,10 @@ public class loadsceneone : MonoBehaviour {
 	public GameObject camPosOne;
 	public GameObject camPosTwo;
 	public GameObject levelOne;
+	public GameObject levelTwo;
 	public Camera pauseCam;
 	int timer;
-	public GameObject scriptball;
+	GameObject scriptball;
 	public GameObject loadText;
 	public GameObject optionMenu;
 
@@ -47,6 +48,7 @@ public class loadsceneone : MonoBehaviour {
 		defaultCamPos = pauseCam.transform.position;
 		defaultTitlePos = title.transform.position;
 		defaultTitleRot = title.transform.rotation;
+		scriptball = GameObject.FindGameObjectWithTag ("ScriptBall");
 	}
 	
 	// Update is called once per frame
@@ -62,6 +64,15 @@ public class loadsceneone : MonoBehaviour {
 				SceneManager.LoadScene ("rev 2 experimental");
 		}
 
+		if (levelTwo.GetComponent<scenemenu>().isPressed){
+			levelTwo.GetComponent<scenemenu>().loading.transform.localScale = Vector3.Lerp (levelTwo.GetComponent<scenemenu>().loading.transform.localScale, new Vector3(1f, 1f, 25), Time.deltaTime * speed);
+			levelTwo.GetComponent<scenemenu>().loading.transform.position = Vector3.Lerp (levelTwo.GetComponent<scenemenu>().loading.transform.position, levelTwo.GetComponent<scenemenu>().loadingPos.transform.position, Time.deltaTime * speed);
+			pauseCam.GetComponent<DepthOfField> ().focalTransform = levelTwo.GetComponent<scenemenu>().loading.gameObject.transform;
+			timer++;
+			if (timer > 30)
+				SceneManager.LoadScene ("test");
+		}
+
 		/*if (isHovering) {
 			loadText.transform.localPosition = Vector3.Lerp (loadText.transform.localPosition, defaultPos + offset, Time.deltaTime * speed);
 		} else {
@@ -73,7 +84,7 @@ public class loadsceneone : MonoBehaviour {
 			if (levelOne.GetComponent<scenemenu> ().isPressed == false) {
 				if (menuIsActive == false) {
 					if (scriptball != null)
-						scriptball.GetComponent<pausemenu> ().onLoadMenu = false;
+						scriptball.GetComponent<loadlevelprefabs>().pauseMenu.GetComponentInChildren<pausemenu>().onLoadMenu = false;
 					pauseCam.GetComponent<DepthOfField> ().focalTransform = title.transform;
 					sceneMenu.transform.localPosition = Vector3.Lerp (sceneMenu.transform.localPosition, new Vector3 (-2.3f, 0.60f, 0), Time.deltaTime * speed);
 					//sceneMenu.transform.localScale = new Vector3 (4.5f, 0.9f, 0.2f);
@@ -104,7 +115,7 @@ public class loadsceneone : MonoBehaviour {
 						menuIsActive = false;
 					}
 					if (scriptball != null)
-						scriptball.GetComponent<pausemenu> ().onLoadMenu = true;
+						scriptball.GetComponent<loadlevelprefabs>().pauseMenu.GetComponentInChildren<pausemenu>().onLoadMenu = true;
 					sceneMenu.transform.position = Vector3.Lerp (sceneMenu.transform.position, menuPos.transform.position, Time.deltaTime * speed);
 					title.transform.position = Vector3.Lerp (title.transform.position, titlePos.transform.position, Time.deltaTime * speed);
 					title.transform.rotation = Quaternion.Lerp (title.transform.rotation, titlePos.transform.rotation, Time.deltaTime * speed);

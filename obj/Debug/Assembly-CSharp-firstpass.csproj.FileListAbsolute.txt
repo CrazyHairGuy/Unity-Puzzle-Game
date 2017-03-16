@@ -58,10 +58,6 @@ D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assemb
 D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\Documents\Unity Projects\git\relearningunity\relearningunity\obj\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\SabreCSG.Core.dll
-C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Advertisements.dll
-C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Purchasing.dll
-C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Advertisements.xml
-C:\Users\trevo\Documents\Unity Projects\restartrelearn\Temp\bin\Debug\UnityEngine.Purchasing.xml
 D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
 D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 D:\Documents\Unity Projects\Unity-Puzzle-Game\Temp\bin\Debug\SabreCSG.Core.dll

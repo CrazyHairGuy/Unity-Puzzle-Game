@@ -13,6 +13,7 @@ TagManager:
   - button
   - excludeFromCrouchTrigger
   - Player_child
+  - ScriptBall
   layers:
   - Default
   - TransparentFX

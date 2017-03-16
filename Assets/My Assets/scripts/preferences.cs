@@ -24,7 +24,7 @@ public class preferences : MonoBehaviour {
 	public GameObject title;
 	public GameObject camPosOne;
 	public Camera pauseCam;
-	public GameObject scriptball;
+	GameObject scriptball;
 	public GameObject optionText;
 	public GameObject load;
 	//public Transform DOFFocus;
@@ -43,6 +43,7 @@ public class preferences : MonoBehaviour {
 		defaultCamPos = pauseCam.transform.position;
 		defaultTitlePos = title.transform.position;
 		defaultTitleRot = title.transform.rotation;
+		scriptball = GameObject.FindGameObjectWithTag ("ScriptBall");
 		//Debug.Log (gameObject.name);
 	}
 	
@@ -92,7 +93,7 @@ public class preferences : MonoBehaviour {
 		//if (levelOne.GetComponent<scenemenu> ().isPressed == false) {
 			if (menuIsActive == false) {
 				if (scriptball != null)
-					scriptball.GetComponent<pausemenu> ().onOptionsMenu = false;
+					scriptball.GetComponent<loadlevelprefabs>().pauseMenu.GetComponentInChildren<pausemenu>().onOptionsMenu = false;
 				pauseCam.GetComponent<DepthOfField> ().focalTransform = title.transform;
 				optionMenu.transform.localPosition = Vector3.Lerp (optionMenu.transform.localPosition, new Vector3 (-2.3f, 0.60f, 0), Time.deltaTime * speed);
 				//optionMenu.transform.localScale = new Vector3 (4.5f, 0.9f, 0.2f);
@@ -122,7 +123,7 @@ public class preferences : MonoBehaviour {
 					menuIsActive = false;
 				}
 				if (scriptball !=null)
-					scriptball.GetComponent<pausemenu> ().onOptionsMenu = true;
+					scriptball.GetComponent<loadlevelprefabs>().pauseMenu.GetComponentInChildren<pausemenu>().onOptionsMenu = true;
 				optionMenu.transform.position = Vector3.Lerp (optionMenu.transform.position, menuPos.transform.position, Time.deltaTime * speed);
 				title.transform.position = Vector3.Lerp (title.transform.position, titlePos.transform.position, Time.deltaTime * speed);
 				title.transform.rotation = Quaternion.Lerp (title.transform.rotation, titlePos.transform.rotation, Time.deltaTime * speed);

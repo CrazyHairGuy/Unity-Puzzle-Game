@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class grab : MonoBehaviour {
 
-	public static grab Instance;
+	//public static grab Instance;
 
 	public GameObject grabbedObject;
 	float grabbedObjectSize;
@@ -106,6 +106,7 @@ public class grab : MonoBehaviour {
 		xRay.SetActive (true);*/
 		newPosition = (hand.transform.position);
 		placementPreview.SetActive (true);
+		//grabbedObject.GetComponent<BoxCollider> ().enabled = false;
 		grabbedObject.transform.rotation = Quaternion.Lerp (grabbedObject.transform.rotation, hand.transform.rotation, Time.deltaTime * rotSpeed * 2);
 		if (activate == 1) {
 			disappear = 1;
@@ -129,6 +130,7 @@ public class grab : MonoBehaviour {
 
 			grabbedObject.GetComponent<MeshRenderer> ().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 			grabbedObject.GetComponent<MeshRenderer> ().material = defaultMaterial;
+			//grabbedObject.GetComponent<BoxCollider> ().enabled = true;
 			grabbedObject.layer = 13;
 			placementPreview.SetActive (false);
 			activate = 1;
@@ -217,7 +219,7 @@ public class grab : MonoBehaviour {
 
 	void Start(){
 
-		Instance = this;
+		//Instance = this;
 
 	}
 

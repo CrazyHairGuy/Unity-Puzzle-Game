@@ -9,26 +9,27 @@ using UnityStandardAssets.CrossPlatformInput;
 public class pausemenu : MonoBehaviour {
 	public GameObject menu; //Pause Menu Canvas
 	//public GameObject pausecam; //Pause Menu Background (obsolete)
-	public GameObject playerCam; //Main Camera
-	public GameObject xRay; //Viewmodel Camera
-	public GameObject player; //FPS Controller
-	public GameObject playerTrigger; //Trigger for picking up blocks
-	public GameObject hud; //Main Hud Canvas
+	//public GameObject playerCam; //Main Camera
+	//public GameObject xRay; //Viewmodel Camera
+	GameObject player; //FPS Controller
+	//public GameObject playerTrigger; //Trigger for picking up blocks
+	GameObject hud; //Main Hud Canvas
 	public bool isShowing = false;
-	public Button restartButton;
-	public Button quitButton;
-	public Button monitorButton;
-	public GameObject minimapCamera;
-	public GameObject minimapCameraTwo;
-	public GameObject minimapCameraThree;
-	public GameObject spriteCamera;
-	public GameObject spriteCameraTwo;
-	public GameObject spriteCameraThree;
-	public GameObject RoomOneTrigger;
-	public GameObject RoomTwoTrigger;
-	public GameObject RoomThreeTrigger;
+	//public Button restartButton;
+	//public Button quitButton;
+	//public Button monitorButton;
+	//public GameObject minimapCamera;
+	//public GameObject minimapCameraTwo;
+	//public GameObject minimapCameraThree;
+	//public GameObject spriteCamera;
+	//public GameObject spriteCameraTwo;
+	//public GameObject spriteCameraThree;
+	///public GameObject RoomOneTrigger;
+	//public GameObject RoomTwoTrigger;
+	//public GameObject RoomThreeTrigger;
 	public bool onLoadMenu = false;
 	public bool onOptionsMenu = false;
+	GameObject scriptball;
 	//float blurSize; //Default blur size for pause menu
 	//public float speed = 5.0f; //Speed for blur in pause menu
 
@@ -36,14 +37,17 @@ public class pausemenu : MonoBehaviour {
 		
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
-		quitButton.onClick.AddListener (Quit);
-		restartButton.onClick.AddListener (Restart);
-		monitorButton.onClick.AddListener (ToggleMonitor);
+		player = GameObject.FindGameObjectWithTag ("Player");
+		scriptball = GameObject.FindGameObjectWithTag ("ScriptBall");
+		hud = scriptball.GetComponent<loadlevelprefabs> ().HUD;
+		//quitButton.onClick.AddListener (Quit);
+		//restartButton.onClick.AddListener (Restart);
+		//monitorButton.onClick.AddListener (ToggleMonitor);
 		//blurSize = playerCam.GetComponent<BlurOptimized> ().blurSize;
 
 	}
 
-	void Quit(){
+	/*void Quit(){
 		Application.Quit();
 	}
 
@@ -52,7 +56,7 @@ public class pausemenu : MonoBehaviour {
 		SceneManager.LoadScene (scene.name);
 	}
 
-	void ToggleMonitor(){
+/	void ToggleMonitor(){
 
 		if (Display.displays.Length > 1) {
 			Display.displays [1].Activate ();
@@ -60,13 +64,13 @@ public class pausemenu : MonoBehaviour {
 			minimapCamera.SetActive (true);
 		}
 
-		/*if (Display.displays.Length > 2) {
+		if (Display.displays.Length > 2) {
 			Display.displays [2].Activate ();
 			minimapCameraTwo.SetActive (true);
 			RoomOneTrigger.SetActive (false);
-		}*/
+		}
 
-		/*if (Display.displays.Length > 3) {
+		if (Display.displays.Length > 3) {
 			Display.displays [3].Activate ();
 			Display.displays [2].Activate ();
 			spriteCamera.GetComponent<Camera> ().targetDisplay = 4;
@@ -76,8 +80,8 @@ public class pausemenu : MonoBehaviour {
 			RoomOneTrigger.SetActive (false);
 			RoomTwoTrigger.SetActive (false);
 			RoomThreeTrigger.SetActive (false);
-		}*/
-	}
+		}
+	}*/
 
 	// Update is called once per frame
 	void Update () {
@@ -90,8 +94,8 @@ public class pausemenu : MonoBehaviour {
 			//pausecam.SetActive (isShowing);
 			player.GetComponent<FirstPersonController>().enabled = !isShowing;
 			player.GetComponent<grab>().enabled = !isShowing;
-			playerCam.GetComponent<BlurOptimized> ().enabled = isShowing;
-			xRay.GetComponent<BlurOptimized> ().enabled = isShowing;
+			//playerCam.GetComponent<BlurOptimized> ().enabled = isShowing;
+			//xRay.GetComponent<BlurOptimized> ().enabled = isShowing;
 			hud.SetActive (!isShowing);
 		}
 

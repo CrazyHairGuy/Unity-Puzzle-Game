@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68628E4F-2987-CED9-7257-81BDFB20F008}</ProjectGuid>
+    <ProjectGuid>{594D5FB5-EC0A-74AF-1808-B9B71AC46AD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraScript.cs" />
+     <Compile Include="Assets\LightProbeHelper\LightProbeGenerator.cs" />
      <Compile Include="Assets\My Assets\scripts\CameraDisable.cs" />
      <Compile Include="Assets\My Assets\scripts\DeathTrigger.cs" />
      <Compile Include="Assets\My Assets\scripts\HudText.cs" />
@@ -64,6 +65,8 @@
      <Compile Include="Assets\My Assets\scripts\holstertwo.cs" />
      <Compile Include="Assets\My Assets\scripts\hud.cs" />
      <Compile Include="Assets\My Assets\scripts\ironsights.cs" />
+     <Compile Include="Assets\My Assets\scripts\levelprefabs.cs" />
+     <Compile Include="Assets\My Assets\scripts\loadlevelprefabs.cs" />
      <Compile Include="Assets\My Assets\scripts\loadsceneone.cs" />
      <Compile Include="Assets\My Assets\scripts\minimapcam.cs" />
      <Compile Include="Assets\My Assets\scripts\multiplediplays.cs" />
@@ -185,6 +188,7 @@
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\LightProbeHelper\Readme.txt" />
      <None Include="Assets\SabreCSG\Shaders\Preview.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
@@ -256,9 +260,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -274,19 +275,16 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="SabreCSG.Core">
- <HintPath>D:/Documents/Unity Projects/Unity-Puzzle-Game/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
+ <HintPath>C:/Users/trevo/Documents/Unity Projects/restartrelearn/Assets/SabreCSG/Scripts/SabreCSG.Core.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5EDFA8EC-6B31-60F9-9C63-2A678D1A4DD5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CA32A7C0-E1F9-0B58-EEB6-B0DBF7155381}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

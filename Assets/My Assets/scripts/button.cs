@@ -11,6 +11,7 @@ public class button : MonoBehaviour {
 	public GameObject door1Dest;
 	public GameObject door2Dest;
 	public GameObject buttonTopDest;
+	public float mass = 0.8f;
 	Vector3 door1T;
 	Vector3 door2T;
 	Vector3 buttonT;
@@ -20,7 +21,12 @@ public class button : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider){
 		if (collider.CompareTag ("button") == false && collider.CompareTag ("player_trigger") == false) {
-			count += 1;
+			if (collider.GetComponent<Rigidbody> ()) {
+				if (collider.GetComponent<Rigidbody> ().mass > mass)
+					count += 1;
+			} else {
+				count += 1;
+			}
 			//Debug.Log ("touch " + count + " " + collider.name);
 		}
 		//count += 1;
@@ -35,7 +41,12 @@ public class button : MonoBehaviour {
 		//Debug.Log ("untouch");
 		//Debug.Log ("untouch " + count);
 		if (collider.CompareTag ("button") == false && collider.CompareTag ("player_trigger") == false) {
-			count -= 1;
+			if (collider.GetComponent<Rigidbody> ()) {
+				if (collider.GetComponent<Rigidbody> ().mass > mass)
+					count -= 1;
+			} else {
+				count -= 1;
+			}
 			//Debug.Log (collider.name);
 			Debug.Log ("untouch " + count + " " + collider.name);
 		}

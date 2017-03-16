@@ -5,17 +5,19 @@ using UnityEngine.UI;
 
 public class HudText : MonoBehaviour {
 
-	public GameObject player;
+	GameObject player;
 	public Text axis;
 	public Text size;
 	public GameObject grabbedObjectHud;
-	public Text throe;
-	public Text resize;
-	public Text hurl;
+	public Image throe;
+	public Image resize;
+	public Image hurl;
 
 	// Use this for initialization
 	void Start () {
-		
+
+		player = GameObject.FindGameObjectWithTag ("Player");
+
 	}
 	
 	// Update is called once per frame
