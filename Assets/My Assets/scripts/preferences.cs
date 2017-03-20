@@ -52,7 +52,8 @@ public class preferences : MonoBehaviour {
 
 		if (load.GetComponent<loadsceneone> ().menuIsActive == false) {
 			if (SceneManager.GetActiveScene().name.Equals("menu") == false) {
-
+				
+				if (!CrossPlatformInputManager.GetButton ("Lock")) {
 					if (Camera.main.GetComponent<DepthOfField> ().enabled) {
 						RaycastHit DOFHit;
 						Ray DOFRay = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
@@ -61,6 +62,7 @@ public class preferences : MonoBehaviour {
 							Camera.main.GetComponent<DepthOfField> ().focalTransform.position = DOFHit.point;
 						}
 					}
+				}
 					
 				if (option.bloom)
 					Camera.main.GetComponent<Bloom> ().enabled = true;
